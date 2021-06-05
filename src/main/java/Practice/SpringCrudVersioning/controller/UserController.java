@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import Practice.SpringCrudVersioning.Bean.UserBean;
 import Practice.SpringCrudVersioning.Dao.UserDao;
 
-@Controller    
+@Controller   
+@RequestMapping("/")
 public class UserController {    
     @Autowired    
     UserDao dao;  

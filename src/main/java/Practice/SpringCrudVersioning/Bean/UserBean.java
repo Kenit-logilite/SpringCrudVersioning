@@ -1,6 +1,5 @@
 package Practice.SpringCrudVersioning.Bean;
 
-import java.math.BigInteger;
 
 public class UserBean {
 

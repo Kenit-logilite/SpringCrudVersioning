@@ -28,9 +28,9 @@ public int delete(int user_id){
     String sql="delete from springcrud where id="+user_id+"";    
     return template.update(sql);    
 }    
-public UserBean getEmpById(int id){    
+public UserBean getuserById(int user_id){    
     String sql="select * from springcrud where id=?";    
-    return template.queryForObject(sql, new Object[]{id},new BeanPropertyRowMapper<UserBean>(UserBean.class));    
+    return template.queryForObject(sql, new Object[]{user_id},new BeanPropertyRowMapper<UserBean>(UserBean.class));    
 }    
 public List<UserBean> getUserBeans(){    
     return template.query("select * from springcrud",new RowMapper<UserBean>(){    

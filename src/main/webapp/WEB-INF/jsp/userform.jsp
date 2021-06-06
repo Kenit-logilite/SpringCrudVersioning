@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>User Registeration</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<a href="userform">Add User</a>  
-	<a href="viewuser">View User</a>  
+		User Form
 </body>
 </html>

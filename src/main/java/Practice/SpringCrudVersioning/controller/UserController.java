@@ -14,13 +14,12 @@ import Practice.SpringCrudVersioning.Bean.UserBean;
 import Practice.SpringCrudVersioning.Dao.UserDao;
 
 @Controller   
-@RequestMapping("/")
 public class UserController {    
     @Autowired    
     UserDao dao;  
         
 
-    @RequestMapping("/userregister")    
+    @RequestMapping(value="/userform")    
     public String showform(Model m){    
         m.addAttribute("command", new UserBean());  
         return "userform";   
@@ -32,11 +31,11 @@ public class UserController {
         return "redirect:/viewuser";
     }    
   
-    @RequestMapping("/viewemp")    
+    @RequestMapping("/viewuser")    
     public String viewemp(Model m){    
         List<UserBean> list=dao.getUserBeans();    
         m.addAttribute("list",list);  
-        return "viewemp";    
+        return "viewuser";    
     }    
   
     @RequestMapping(value="/edituser/{user_id}")    

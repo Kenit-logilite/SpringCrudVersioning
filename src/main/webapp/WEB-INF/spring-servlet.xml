@@ -10,25 +10,19 @@
         http://www.springframework.org/schema/context/spring-context.xsd  
         http://www.springframework.org/schema/mvc  
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">  
-<context:component-scan base-package="Practice.SpringCrudVersioning.controller.UserController"></context:component-scan>    
+<context:component-scan base-package="Practice.SpringCrudVersioning.controller"></context:component-scan>    
     
 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">    
 <property name="prefix" value="/WEB-INF/jsp/"></property>    
 <property name="suffix" value=".jsp"></property>    
 </bean>    
-    
-<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">    
-<property name="driverClassName" value="org.postgresql.Driver"></property>    
-<property name="url" value="jdbc:postgresql://localhost/spring_crud"></property>    
-<property name="username" value="root"></property>    
-<property name="password" value="Kenit@2000"></property>    
-</bean>    
+ 
     
 <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">    
 <property name="dataSource" ref="ds"></property>    
 </bean>    
     
-<bean id="dao" class="Practice.SpringCrudVersioning.Dao">    
+<bean id="dao" class="Practice.SpringCrudVersioning.Dao.UserDao">    
 <property name="template" ref="jt"></property>    
 </bean>       
 </beans>
